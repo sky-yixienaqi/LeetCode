@@ -17,12 +17,12 @@ public class LeetCode1304 {
     public static int[] sumZero(int n) {
         int[] res = new int[n];
         int size = n;
-        //如果是奇数个，默认最后一个值为0，前面数组中元素 互为反数
+        //如果是奇数个，默认最后一个值为0，前面数组中俩互为反数
         if(n % 2 != 0){
             size = n - 1;
             res[n - 1] = 0;
         }
-        size = size/2;//循环一半即可 前半部分放正数 后半部分放负数 (互为反数)
+        size = size/2;//循环一半即可 前半部分放正数 后半部分放负数
         for(int i = 1 ; i <= size; i++){
             res[i - 1] = i;
             res[size + i - 1] = -i;
